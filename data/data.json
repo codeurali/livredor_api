@@ -1,0 +1,12 @@
+[
+    {
+        "id":1,
+        "comment":"Exemple de commentaire",
+        "author": "Random"
+    },
+    {
+        "id":2,
+        "comment":"Un autre exemple de commentaire",
+        "author":"Batman"
+    }
+]
