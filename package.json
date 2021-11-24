@@ -8,7 +8,7 @@
     "dev": "nodemon -e js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ali Taggaz",
   "license": "ISC",
   "devDependencies": {
     "cors": "^2.8.5",
