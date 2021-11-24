@@ -6,6 +6,9 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 3003
 
+const cors = require('cors');
+app.use(cors());
+
 app.use(express.json());
 
 
@@ -32,6 +35,11 @@ const insert = newPost => {
     helpers.writeJSONFile(filename, posts)
 }
 
+const remove = id => {
+  posts.filter(post => post.id !== id)
+  helpers.writeJSONFile(filename, posts);
+}
+
 
 app.get('/', (req, res) => {
   res.send(list());
@@ -42,7 +50,12 @@ app.post('/add', (req, res) => {
   console.log(req.query)
 })
 
+app.delete('/delete/:id', (req, res) => {
+  const id = req.params.id;
+  res.send(remove(id))
+})
+
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Listening at http://localhost:${port}`)
 })
 
