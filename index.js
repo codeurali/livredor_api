@@ -1,13 +1,14 @@
 const helpers = require('./helper/helpers');
 const posts = require("./data/data.json");
 const filename = "./data/data.json"
-const cors = require('cors');
-app.use(cors());
+
 
 
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3003
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.json());
 
