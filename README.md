@@ -16,7 +16,7 @@ npm run dev
 
 ### Get all posts
 
----> http://localhost:3003/
+---> https://livredorapi.herokuapp.com/
 
 ### Insert post
----> http://localhost:3003/add
+---> https://livredorapi.herokuapp.com/
